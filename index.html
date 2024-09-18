@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leads Bounty V1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ['Poppins', 'sans-serif'],
+            },
+            animation: {
+              'infinite-scroll': 'infinite-scroll 30s linear infinite',
+              'fade-in': 'fade-in 1s ease-out forwards',
+              'fade-in-delay': 'fade-in 1s ease-out 0.5s forwards',
+              'fade-in-section': 'fade-in 2s ease-out forwards',
+              'fade-in-faq-anim': 'fade-in 1s ease-out forwards',
+              'slide-in-left': 'slide-in-left 1s ease-out forwards',
+              'slide-in-right': 'slide-in-right 1s ease-out forwards',
+            },
+            keyframes: {
+              'infinite-scroll': {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+              'fade-in': {
+                '0%': { opacity: 0, transform: 'translateY(20px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+              'fade-in-section': {
+                '0%': { opacity: 0, transform: 'translateY(20px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+              'fade-in-faq-anim': {
+                '0%': { opacity: 0, transform: 'translateY(20px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+              'slide-in-left': {
+                '0%': { opacity: 0, transform: 'translateX(-100px)' },
+                '100%': { opacity: 1, transform: 'translateX(0)' },
+              },
+              'slide-in-right': {
+                '0%': { opacity: 0, transform: 'translateX(100px)' },
+                '100%': { opacity: 1, transform: 'translateX(0)' },
+              },
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="font-poppins">
+    <header class="bg-[#0e74ff] shadow-md">
+      <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center font-bold">
+          <img src="assets/logo.png" alt="LeadsBounty Logo" class="w-auto my-2" />
+        </div>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="lg:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="hidden lg:flex space-x-8 items-center">
+          <a href="#" class="text-white hover:text-gray-200">Join us now</a>
+          <a href="#" class="text-black bg-white rounded-full px-16 py-2">Sign in</a>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="lg:hidden absolute top-16 left-0 right-0 bg-[#0e74ff] hidden flex flex-col items-center space-y-4 py-4 mt-4">
+          <a href="#" class="text-white hover:text-gray-200">Join us now</a>
+          <a href="#" class="text-black bg-white rounded-full px-16 py-2">Sign in</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="text-center py-[100px] overflow-hidden text-white">
+      <h1 class="text-black text-5xl mb-[20px] leading-[60px] opacity-0 translate-y-5 animate-fade-in px-8 md:px-0">
+        Bring <span class="text-[#0e74ff] font-bold">Interested Clients,</span><br />
+        And
+        <span class="text-[#0e74ff] font-bold"
+          >Get <span class="relative">Paid <img src="assets/text.png" alt="arrow" class="absolute -bottom-2 right-0" /> </span
+        ></span>
+        as Never Before!
+      </h1>
+
+      <button class="bg-[#0e74ff] text-white py-3 px-6 rounded-full text-xl cursor-pointer mt-5 opacity-0 translate-y-5 animate-fade-in-delay">Join the best affiliate program Now!</button>
+
+      <main class="relative flex flex-col mt-[150px] justify-center bg-[#0e74ff] overflow-hidden rotate-[-2deg]">
+        <div class="w-full mx-auto px-4 md:px-6 py-4">
+          <div class="text-center">
+            <div
+              x-data="{}"
+              x-init="$nextTick(() => {
+                          let ul = $refs.logos;
+                          ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                          ul.nextSibling.setAttribute('aria-hidden', 'true');
+                      })"
+              class="w-full inline-flex flex-nowrap overflow-hidden"
+            >
+              <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+                <li>
+                  <img src="assets/amazon.png" alt="amazon" />
+                </li>
+                <li>
+                  <img src="assets/star.png" alt="star" class="w-[40px]" />
+                </li>
+                <li>
+                  <img src="assets/coursera.png" alt="coursera" />
+                </li>
+                <li>
+                  <img src="assets/star.png" alt="star" class="w-[40px]" />
+                </li>
+                <li>
+                  <img src="assets/voluum.png" alt="voluum" />
+                </li>
+                <li>
+                  <img src="assets/star.png" alt="star" class="w-[40px]" />
+                </li>
+                <li>
+                  <img src="assets/lightfunnels.png" alt="lightfunnels" />
+                </li>
+                <li>
+                  <img src="assets/star.png" alt="star" class="w-[40px]" />
+                </li>
+              </ul>
+
+              <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+                <li>
+                  <img src="assets/amazon.png" alt="amazon" />
+                </li>
+                <li>
+                  <img src="assets/star.png" alt="star" class="w-[40px]" />
+                </li>
+                <li>
+                  <img src="assets/coursera.png" alt="coursera" />
+                </li>
+                <li>
+                  <img src="assets/star.png" alt="star" class="w-[40px]" />
+                </li>
+                <li>
+                  <img src="assets/voluum.png" alt="voluum" />
+                </li>
+                <li>
+                  <img src="assets/star.png" alt="star" class="w-[40px]" />
+                </li>
+                <li>
+                  <img src="assets/lightfunnels.png" alt="lightfunnels" />
+                </li>
+                <li>
+                  <img src="assets/star.png" alt="star" class="w-[40px]" />
+                </li>
+              </ul>
+
+              <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+                <li>
+                  <img src="assets/amazon.png" alt="amazon" />
+                </li>
+                <li>
+                  <img src="assets/star.png" alt="star" class="w-[40px]" />
+                </li>
+                <li>
+                  <img src="assets/coursera.png" alt="coursera" />
+                </li>
+                <li>
+                  <img src="assets/star.png" alt="star" class="w-[40px]" />
+                </li>
+                <li>
+                  <img src="assets/voluum.png" alt="voluum" />
+                </li>
+                <li>
+                  <img src="assets/star.png" alt="star" class="w-[40px]" />
+                </li>
+                <li>
+                  <img src="assets/lightfunnels.png" alt="lightfunnels" />
+                </li>
+                <li>
+                  <img src="assets/star.png" alt="star" class="w-[40px]" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <!-- Affiliate Program -->
+
+    <section id="affiliate-section" class="mb-20 opacity-0 transition-opacity duration-700 relative">
+      <div class="absolute abstract w-full h-full -top-16"></div>
+      <div class="mx-auto px-6 sm:px-20 md:px-36 lg:px-36 text-center">
+        <!-- Button: How to get started -->
+        <div class="mb-6 flex items-center justify-center">
+          <div class="w-fit px-6 py-2 bg-[#3B82F6] text-white text-sm font-semibold rounded-full">How to get started</div>
+        </div>
+
+        <!-- Heading -->
+        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800">Start Your Affiliate Marketing Journey Today!</h1>
+
+        <!-- Steps: Grid Container -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left mt-20">
+          <!-- Step 1: Ask to Join -->
+          <div class="flex flex-col items-center opacity-0 translate-y-5 animate-fade-in-delay affiliate-section-div-1">
+            <img src="assets/Hourglass.png" alt="Ask to join our program" class="h-20 mb-4" />
+            <h3 class="text-xl text-black font-semibold mb-2">Ask to join our program</h3>
+            <p class="text-[#3B82F6] text-lg text-center">Request to join our program. If approved, you'll gain access to exclusive offers, personalized support, and fast payouts.</p>
+          </div>
+
+          <!-- Step 2: Bring Qualified Leads -->
+          <div class="flex flex-col items-center opacity-0 translate-y-5 animate-fade-in-delay affiliate-section-div-2">
+            <img src="assets/Magnet.png" alt="Bring Qualified Leads" class="h-20 mb-4" />
+            <h3 class="text-xl text-black font-semibold mb-2">Bring Qualified Leads</h3>
+            <p class="text-[#3B82F6] text-lg text-center">Bring qualified leads and unlock your potential to earn higher commissions with every successful Lead.</p>
+          </div>
+
+          <!-- Step 3: Get a Higher Rank -->
+          <div class="flex flex-col items-center opacity-0 translate-y-5 animate-fade-in-delay affiliate-section-div-3">
+            <img src="assets/Graph.png" alt="Get a higher Rank" class="h-20 mb-4" />
+            <h3 class="text-xl text-black font-semibold mb-2">Get a higher Rank</h3>
+            <p class="text-[#3B82F6] text-lg text-center">Achieve a higher rank and enjoy increased rewards and recognition by excelling in our affiliate program.</p>
+          </div>
+
+          <!-- Step 4: Sky Rocket -->
+          <div class="flex flex-col items-center opacity-0 translate-y-5 animate-fade-in-delay affiliate-section-div-4">
+            <img src="assets/Rocket.png" alt="Sky Rocket!" class="h-20 mb-4" />
+            <h3 class="text-xl text-black font-semibold mb-2">Sky Rocket!</h3>
+            <p class="text-[#3B82F6] text-lg text-center">Skyrocket your earnings and success with our high-converting offers and top-tier affiliate support!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End: Affiliate Program -->
+
+    <!-- FAQs -->
+
+    <section class="w-full px-6 sm:px-20 md:px-36 lg:px-36 bg-[#0e74ff] py-20">
+      <h2 class="text-white text-center text-5xl font-semibold mb-8">FAQ's</h2>
+
+      <!-- FAQ Item 1 -->
+      <div class="faq-item p-4 mb-4 border-b border-b-white opacity-0 transition-opacity duration-700" id="faq-item-1">
+        <button class="faq-btn w-full text-left flex justify-between items-center font-semibold text-white" onclick="toggleFaq(this, 'faq-item-1')">
+          How long does it take to get approved?
+          <img src="assets/collapsed.png" alt="Collapsed" id="collapsed" />
+          <img src="assets/expanded.png" alt="Expanded" id="expanded" class="hidden" />
+        </button>
+        <div class="faq-content text-lg text-white text-left mt-2">Approval times vary, but typically, you'll receive a response within a few business days. During this period, we review your application to ensure it meets our program criteria.</div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="faq-item p-4 mb-4 border-b border-b-white opacity-0 transition-opacity duration-700" id="faq-item-2">
+        <button class="faq-btn w-full text-left flex justify-between items-center font-semibold text-white" onclick="toggleFaq(this, 'faq-item-2')">
+          How can I track my performance?
+          <img src="assets/collapsed.png" alt="Collapsed" id="collapsed" />
+          <img src="assets/expanded.png" alt="Expanded" id="expanded" class="hidden" />
+        </button>
+        <div class="faq-content text-lg text-white text-left mt-2">You can track your performance through the affiliate dashboard, where you will find real-time analytics and performance metrics.</div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="faq-item p-4 mb-4 border-b border-b-white opacity-0 transition-opacity duration-700" id="faq-item-3">
+        <button class="faq-btn w-full text-left flex justify-between items-center font-semibold text-white" onclick="toggleFaq(this, 'faq-item-3')">
+          What if I have more questions?
+          <img src="assets/collapsed.png" alt="Collapsed" id="collapsed" />
+          <img src="assets/expanded.png" alt="Expanded" id="expanded" class="hidden" />
+        </button>
+        <div class="faq-content text-lg text-white text-left mt-2">Feel free to reach out to our support team through email or the support portal. We are here to help with any additional questions you might have.</div>
+      </div>
+    </section>
+
+    <!-- END: FAQs -->
+
+    <!-- Banner -->
+
+    <section class="container mx-auto px-4 pt-16">
+      <div class="flex flex-col gap-16 md:flex-row justify-between" id="animate-section">
+        <!-- Left Section: Image -->
+        <div class="mb-8 md:mb-0 md:w-1/2 flex-col justify-center opacity-0" id="left-section">
+          <h1 class="text-3xl md:text-5xl lg:text-5xl leading-normal text-gray-900 mb-12 text-center md:text-left lg:text-left md:pl-16 lg:pl-16 font-semibold">Why you need to work with <span class="text-blue-500 font-bold">Leads Bounty!</span></h1>
+          <div class="image-stack relative">
+            <img src="assets/banner.png" alt="Person working on laptop" class="w-full" />
+          </div>
+        </div>
+
+        <!-- Right Section: Text & Features -->
+        <div class="md:w-1/2 space-y-4 opacity-0" id="right-section">
+          <p class="text-red-600 font-semibold mb-4 italic">Key Features</p>
+
+          <!-- Features List -->
+          <ul class="space-y-4">
+            <li class="flex-col items-start mb-8">
+              <div class="flex items-center gap-4 mb-4">
+                <img src="assets/tick_mark.png" alt="tick mark" class="w-6" />
+                <h3 class="font-bold text-xl text-gray-900 italic">High Commission Rates</h3>
+              </div>
+              <p class="text-gray-700 text-gray-700 text-xl">Our affiliate program offers some of the highest commission rates in the industry, allowing you to maximize your earnings with every sale.</p>
+            </li>
+            <li class="flex-col items-start mb-8">
+              <div class="flex items-center gap-4 mb-4">
+                <img src="assets/tick_mark.png" alt="tick mark" class="w-6" />
+                <h3 class="font-bold text-xl text-gray-900 italic">Fast and Reliable Payouts</h3>
+              </div>
+              <p class="text-gray-700 text-gray-700 text-xl">We offer bi-weekly payments, so you won’t have to wait long to receive your earnings. Whether you prefer PayPal, bank transfer, or any other payment method, we’ve got you covered.</p>
+            </li>
+            <li class="flex-col items-start mb-8">
+              <div class="flex items-center gap-4 mb-4">
+                <img src="assets/tick_mark.png" alt="tick mark" class="w-6" />
+                <h3 class="font-bold text-xl text-gray-900 italic">Exclusive High-Converting Offers</h3>
+              </div>
+              <p class="text-gray-700 text-gray-700 text-xl">Our affiliate program offers exclusive, high-converting deals optimized for maximum commissions, giving you an edge with minimal effort.</p>
+            </li>
+            <li class="flex-col items-start mb-8">
+              <div class="flex items-center gap-4 mb-4">
+                <img src="assets/tick_mark.png" alt="tick mark" class="w-6" />
+                <h3 class="font-bold text-xl text-gray-900 italic">Creative Marketing Resources</h3>
+              </div>
+              <p class="text-gray-700 text-gray-700 text-xl">
+                Enhance your affiliate campaigns with our extensive marketing resources, including banners, custom landing pages, email templates, videos, and proven ad copy to boost traffic and conversions.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+      <div class="container mx-auto px-4 flex flex-col lg:flex-row justify-between items-center text-sm">
+        <!-- Logo Section -->
+        <div class="text-white flex items-center mb-4 lg:mb-0 space-x-2">
+          <div class="flex items-center font-bold">
+            <img src="assets/logo.png" alt="LeadsBounty Logo" class="w-auto my-2" />
+          </div>
+        </div>
+
+        <!-- Links Section -->
+        <div class="space-y-2 lg:space-y-0 lg:space-x-6 text-center lg:text-left">
+          <a href="#" class="block lg:inline hover:text-gray-400">© Leads Bounty</a>
+          <a href="#" class="block lg:inline hover:text-gray-400">Privacy Policy</a>
+          <a href="#" class="block lg:inline hover:text-gray-400">Cookies Policy</a>
+          <a href="#" class="block lg:inline hover:text-gray-400">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- END: Banner -->
+
+    <!-- SCRIPT -->
+    <script>
+      const menuBtn = document.getElementById('menu-btn')
+      const mobileMenu = document.getElementById('mobile-menu')
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.target.id === 'affiliate-section') {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-active')
+                entry.target.classList.remove('opacity-0')
+              } else {
+                entry.target.classList.add('opacity-0')
+                entry.target.classList.remove('fade-in-active')
+              }
+            }
+
+            if (entry.target.id === 'faq-item-1' || entry.target.id === 'faq-item-2' || entry.target.id === 'faq-item-3') {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-faq-anim') // Updated class name
+                entry.target.classList.remove('opacity-0')
+              } else {
+                entry.target.classList.add('opacity-0')
+                entry.target.classList.remove('fade-in-faq-anim') // Updated class name
+              }
+            }
+
+            if (entry.target.id === 'animate-section') {
+              if (entry.isIntersecting) {
+                document.querySelector('#left-section').classList.add('animate-slide-in-left')
+                document.querySelector('#right-section').classList.add('animate-slide-in-right')
+              } else {
+                document.querySelector('#left-section').classList.remove('animate-slide-in-left')
+                document.querySelector('#right-section').classList.remove('animate-slide-in-right')
+              }
+            }
+          })
+        })
+
+        observer.observe(document.querySelector('#affiliate-section'))
+        observer.observe(document.querySelector('#faq-item-1'))
+        observer.observe(document.querySelector('#faq-item-2'))
+        observer.observe(document.querySelector('#faq-item-3'))
+        observer.observe(document.querySelector('#animate-section'))
+      })
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden')
+      })
+
+      function toggleFaq(button, elem_id) {
+        const faqItem = button.parentElement
+        const content = faqItem.querySelector('.faq-content')
+        const collapsedIcon = button.querySelector('#collapsed')
+        const expandedIcon = button.querySelector('#expanded')
+
+        if (content.style.display === 'none' || !content.style.display) {
+          content.style.display = 'block'
+          faqItem.classList.add('open')
+          collapsedIcon.style.display = 'none'
+          expandedIcon.style.display = 'block'
+          document.getElementById(elem_id).classList.add('opened-faq')
+        } else if (content.style.display === 'block') {
+          content.style.display = 'none'
+          faqItem.classList.remove('open')
+          collapsedIcon.style.display = 'block'
+          expandedIcon.style.display = 'none'
+          document.getElementById(elem_id).classList.remove('opened-faq')
+        }
+      }
+    </script>
+
+    <!-- END: SCRIPT -->
+  </body>
+</html>

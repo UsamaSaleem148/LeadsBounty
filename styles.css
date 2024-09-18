@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.faq-item.open .faq-content {
+  display: block;
+}
+
+.opened-faq {
+  background: white;
+  border-radius: 10px;
+}
+
+.faq-item .faq-content {
+  display: none;
+}
+
+.faq-item.open .faq-content,
+.faq-item.open .faq-btn {
+  color: #000000 !important;
+}
+
+.fade-in-active {
+  animation: fade-in-section;
+}
+
+.fade-in-faq-anim {
+  animation: fade-in-faq-anim; /* Ensure it points to the correct keyframes */
+}
+
+.affiliate-section-div-1:hover img,
+.affiliate-section-div-2:hover img,
+.affiliate-section-div-3:hover img,
+.affiliate-section-div-4:hover img {
+  transform: translateY(-10px);
+}
+
+.affiliate-section-div-1 img,
+.affiliate-section-div-2 img,
+.affiliate-section-div-3 img,
+.affiliate-section-div-4 img {
+  transition: 0.5s all ease-in-out;
+}
+
+.abstract {
+  margin: 0;
+  padding: 0;
+  background-image: url('assets/abstract.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
