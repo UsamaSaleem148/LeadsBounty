@@ -4,12 +4,12 @@
   box-sizing: border-box;
 }
 
-body {
+.header-section {
   margin: 0;
   padding: 0;
   background-image: url('assets/bg.png');
   background-size: cover;
-  background-position: center;
+  background-position: center calc(100% - 30%);
   background-repeat: no-repeat;
 }
 

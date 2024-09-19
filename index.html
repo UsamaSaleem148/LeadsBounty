@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leads Bounty V1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -13,6 +16,9 @@
           extend: {
             fontFamily: {
               poppins: ['Poppins', 'sans-serif'],
+              abeezee: ['ABeeZee', 'sans-serif'],
+              dmsans: ['DM Sans', 'sans-serif'],
+              inter: ['Inter', 'sans-serif'],
             },
             animation: {
               'infinite-scroll': 'infinite-scroll 30s linear infinite',
@@ -59,7 +65,7 @@
       <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
         <!-- Logo -->
         <div class="flex items-center font-bold">
-          <img src="assets/logo.png" alt="LeadsBounty Logo" class="w-auto my-2" />
+          <img src="assets/logo.png" alt="LeadsBounty Logo" class="w-40 md:w-auto my-2" />
         </div>
 
         <!-- Hamburger Menu for Mobile -->
@@ -78,15 +84,15 @@
         </div>
 
         <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="lg:hidden absolute top-16 left-0 right-0 bg-[#0e74ff] hidden flex flex-col items-center space-y-4 py-4 mt-4">
+        <div id="mobile-menu" class="lg:hidden absolute top-16 left-0 right-0 bg-[#0e74ff] opacity-0 invisible transform -translate-y-10 scale-95 transition-all duration-300 ease-in-out flex flex-col items-center space-y-4 py-4">
           <a href="#" class="text-white hover:text-gray-200">Join us now</a>
           <a href="#" class="text-black bg-white rounded-full px-16 py-2">Sign in</a>
         </div>
       </nav>
     </header>
 
-    <section class="text-center py-[100px] overflow-hidden text-white">
-      <h1 class="text-black text-5xl mb-[20px] leading-[60px] opacity-0 translate-y-5 animate-fade-in px-8 md:px-0">
+    <section class="text-center pt-[100px] pb-[40px] overflow-hidden text-white header-section">
+      <h1 class="text-black text-2xl md:text-5xl lg:text-5xl mb-[20px] leading-[40px] md:leading-[60px] opacity-0 translate-y-5 animate-fade-in px-8 md:px-0 contents md:block">
         Bring <span class="text-[#0e74ff] font-bold">Interested Clients,</span><br />
         And
         <span class="text-[#0e74ff] font-bold"
@@ -95,7 +101,7 @@
         as Never Before!
       </h1>
 
-      <button class="bg-[#0e74ff] text-white py-3 px-6 rounded-full text-xl cursor-pointer mt-5 opacity-0 translate-y-5 animate-fade-in-delay">Join the best affiliate program Now!</button>
+      <button class="bg-[#0e74ff] text-white py-3 px-6 rounded-full text-sm md:text-xl cursor-pointer mt-5 opacity-0 translate-y-5 animate-fade-in-delay">Join the best affiliate program Now!</button>
 
       <main class="relative flex flex-col mt-[150px] justify-center bg-[#0e74ff] overflow-hidden rotate-[-2deg]">
         <div class="w-full mx-auto px-4 md:px-6 py-4">
@@ -197,12 +203,12 @@
 
     <!-- Affiliate Program -->
 
-    <section id="affiliate-section" class="mb-20 opacity-0 transition-opacity duration-700 relative">
+    <section id="affiliate-section" class="my-20 transition-opacity duration-700 relative fade-in-active">
       <div class="absolute abstract w-full h-full -top-16"></div>
-      <div class="mx-auto px-6 sm:px-20 md:px-36 lg:px-36 text-center">
+      <div class="mx-auto px-6 sm:px-20 md:px-36 lg:px-36 text-center relative z-10">
         <!-- Button: How to get started -->
         <div class="mb-6 flex items-center justify-center">
-          <div class="w-fit px-6 py-2 bg-[#3B82F6] text-white text-sm font-semibold rounded-full">How to get started</div>
+          <div class="w-fit px-6 py-2 bg-[#3B82F6] text-white text-[16px] font-semibold rounded-full font-inter">How to get started</div>
         </div>
 
         <!-- Heading -->
@@ -214,28 +220,28 @@
           <div class="flex flex-col items-center opacity-0 translate-y-5 animate-fade-in-delay affiliate-section-div-1">
             <img src="assets/Hourglass.png" alt="Ask to join our program" class="h-20 mb-4" />
             <h3 class="text-xl text-black font-semibold mb-2">Ask to join our program</h3>
-            <p class="text-[#3B82F6] text-lg text-center">Request to join our program. If approved, you'll gain access to exclusive offers, personalized support, and fast payouts.</p>
+            <p class="text-[#3B82F6] text-lg text-center font-inter">Request to join our program. If approved, you'll gain access to exclusive offers, personalized support, and fast payouts.</p>
           </div>
 
           <!-- Step 2: Bring Qualified Leads -->
           <div class="flex flex-col items-center opacity-0 translate-y-5 animate-fade-in-delay affiliate-section-div-2">
             <img src="assets/Magnet.png" alt="Bring Qualified Leads" class="h-20 mb-4" />
             <h3 class="text-xl text-black font-semibold mb-2">Bring Qualified Leads</h3>
-            <p class="text-[#3B82F6] text-lg text-center">Bring qualified leads and unlock your potential to earn higher commissions with every successful Lead.</p>
+            <p class="text-[#3B82F6] text-lg text-center font-inter">Bring qualified leads and unlock your potential to earn higher commissions with every successful Lead.</p>
           </div>
 
           <!-- Step 3: Get a Higher Rank -->
           <div class="flex flex-col items-center opacity-0 translate-y-5 animate-fade-in-delay affiliate-section-div-3">
             <img src="assets/Graph.png" alt="Get a higher Rank" class="h-20 mb-4" />
             <h3 class="text-xl text-black font-semibold mb-2">Get a higher Rank</h3>
-            <p class="text-[#3B82F6] text-lg text-center">Achieve a higher rank and enjoy increased rewards and recognition by excelling in our affiliate program.</p>
+            <p class="text-[#3B82F6] text-lg text-center font-inter">Achieve a higher rank and enjoy increased rewards and recognition by excelling in our affiliate program.</p>
           </div>
 
           <!-- Step 4: Sky Rocket -->
           <div class="flex flex-col items-center opacity-0 translate-y-5 animate-fade-in-delay affiliate-section-div-4">
             <img src="assets/Rocket.png" alt="Sky Rocket!" class="h-20 mb-4" />
             <h3 class="text-xl text-black font-semibold mb-2">Sky Rocket!</h3>
-            <p class="text-[#3B82F6] text-lg text-center">Skyrocket your earnings and success with our high-converting offers and top-tier affiliate support!</p>
+            <p class="text-[#3B82F6] text-lg text-center font-inter">Skyrocket your earnings and success with our high-converting offers and top-tier affiliate support!</p>
           </div>
         </div>
       </div>
@@ -287,45 +293,49 @@
       <div class="flex flex-col gap-16 md:flex-row justify-between" id="animate-section">
         <!-- Left Section: Image -->
         <div class="mb-8 md:mb-0 md:w-1/2 flex-col justify-center opacity-0" id="left-section">
-          <h1 class="text-3xl md:text-5xl lg:text-5xl leading-normal text-gray-900 mb-12 text-center md:text-left lg:text-left md:pl-16 lg:pl-16 font-semibold">Why you need to work with <span class="text-blue-500 font-bold">Leads Bounty!</span></h1>
+          <h1 class="text-[25px] md:text-[30px] lg:text-[48px] leading-normal tracking-wide text-gray-900 mb-12 text-center md:text-left lg:text-left md:pl-16 lg:pl-16 font-semibold">
+            Why you need to work with <span class="text-blue-500 font-bold">Leads Bounty!</span>
+          </h1>
           <div class="image-stack relative">
             <img src="assets/banner.png" alt="Person working on laptop" class="w-full" />
           </div>
         </div>
 
         <!-- Right Section: Text & Features -->
-        <div class="md:w-1/2 space-y-4 opacity-0" id="right-section">
-          <p class="text-red-600 font-semibold mb-4 italic">Key Features</p>
+        <div class="md:w-1/2 space-y-4 opacity-0 animate-slide-in-right p-4 md:p-0" id="right-section">
+          <p class="text-red-600 font-semibold mb-4 italic text-xs md:text-lg">Key Features</p>
 
           <!-- Features List -->
           <ul class="space-y-4">
             <li class="flex-col items-start mb-8">
               <div class="flex items-center gap-4 mb-4">
                 <img src="assets/tick_mark.png" alt="tick mark" class="w-6" />
-                <h3 class="font-bold text-xl text-gray-900 italic">High Commission Rates</h3>
+                <h3 class="text-[18px] md:text-[22px] text-gray-900 italic font-abeezee">High Commission Rates</h3>
               </div>
-              <p class="text-gray-700 text-gray-700 text-xl">Our affiliate program offers some of the highest commission rates in the industry, allowing you to maximize your earnings with every sale.</p>
+              <p class="text-gray-700 text-gray-700 text-[16px] md:text-[20px] font-dmsans">Our affiliate program offers some of the highest commission rates in the industry, allowing you to maximize your earnings with every sale.</p>
             </li>
             <li class="flex-col items-start mb-8">
               <div class="flex items-center gap-4 mb-4">
                 <img src="assets/tick_mark.png" alt="tick mark" class="w-6" />
-                <h3 class="font-bold text-xl text-gray-900 italic">Fast and Reliable Payouts</h3>
+                <h3 class="text-[18px] md:text-[22px] text-gray-900 italic font-abeezee">Fast and Reliable Payouts</h3>
               </div>
-              <p class="text-gray-700 text-gray-700 text-xl">We offer bi-weekly payments, so you won’t have to wait long to receive your earnings. Whether you prefer PayPal, bank transfer, or any other payment method, we’ve got you covered.</p>
+              <p class="text-gray-700 text-gray-700 text-[16px] md:text-[20px] font-dmsans">
+                We offer bi-weekly payments, so you won’t have to wait long to receive your earnings. Whether you prefer PayPal, bank transfer, or any other payment method, we’ve got you covered.
+              </p>
             </li>
             <li class="flex-col items-start mb-8">
               <div class="flex items-center gap-4 mb-4">
                 <img src="assets/tick_mark.png" alt="tick mark" class="w-6" />
-                <h3 class="font-bold text-xl text-gray-900 italic">Exclusive High-Converting Offers</h3>
+                <h3 class="text-[18px] md:text-[22px] text-gray-900 italic font-abeezee">Exclusive High-Converting Offers</h3>
               </div>
-              <p class="text-gray-700 text-gray-700 text-xl">Our affiliate program offers exclusive, high-converting deals optimized for maximum commissions, giving you an edge with minimal effort.</p>
+              <p class="text-gray-700 text-gray-700 text-[16px] md:text-[20px] font-dmsans">Our affiliate program offers exclusive, high-converting deals optimized for maximum commissions, giving you an edge with minimal effort.</p>
             </li>
             <li class="flex-col items-start mb-8">
               <div class="flex items-center gap-4 mb-4">
                 <img src="assets/tick_mark.png" alt="tick mark" class="w-6" />
-                <h3 class="font-bold text-xl text-gray-900 italic">Creative Marketing Resources</h3>
+                <h3 class="text-[18px] md:text-[22px] text-gray-900 italic font-abeezee">Creative Marketing Resources</h3>
               </div>
-              <p class="text-gray-700 text-gray-700 text-xl">
+              <p class="text-gray-700 text-gray-700 text-[16px] md:text-[20px] font-dmsans">
                 Enhance your affiliate campaigns with our extensive marketing resources, including banners, custom landing pages, email templates, videos, and proven ad copy to boost traffic and conversions.
               </p>
             </li>
@@ -340,7 +350,7 @@
         <!-- Logo Section -->
         <div class="text-white flex items-center mb-4 lg:mb-0 space-x-2">
           <div class="flex items-center font-bold">
-            <img src="assets/logo.png" alt="LeadsBounty Logo" class="w-auto my-2" />
+            <img src="assets/logo.png" alt="LeadsBounty Logo" class="w-40 md:w-auto my-2" />
           </div>
         </div>
 
@@ -404,7 +414,15 @@
       })
 
       menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden')
+        if (mobileMenu.classList.contains('invisible')) {
+          // Opening the menu
+          mobileMenu.classList.remove('opacity-0', 'invisible', '-translate-y-10', 'scale-95')
+          mobileMenu.classList.add('opacity-100', 'translate-y-0', 'scale-100')
+        } else {
+          // Closing the menu
+          mobileMenu.classList.add('opacity-0', 'invisible', '-translate-y-10', 'scale-95')
+          mobileMenu.classList.remove('opacity-100', 'translate-y-0', 'scale-100')
+        }
       })
 
       function toggleFaq(button, elem_id) {
