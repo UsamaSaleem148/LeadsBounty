@@ -7,10 +7,7 @@
 .header-section {
   margin: 0;
   padding: 0;
-  background-image: url('assets/bg.png');
-  background-size: cover;
-  background-position: center calc(100% - 30%);
-  background-repeat: no-repeat;
+  background: linear-gradient(343deg, rgba(255, 255, 255, 0.15) 39.11%, rgba(59, 130, 246, 0.15) 55.89%, rgba(59, 130, 246, 0.15) 60.09%, rgba(255, 255, 255, 0.15) 78.62%, rgba(59, 130, 246, 0.15) 95.05%);
 }
 
 .faq-item.open .faq-content {
