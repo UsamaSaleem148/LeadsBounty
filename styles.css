@@ -58,18 +58,18 @@
 }
 
 @media (max-width: 1536px) {
-  #animate-section #left-section {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  #animate-section #left-section .image-stack {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   #animate-section #left-section .image-stack img {
     width: fit-content;
   }
+}
+
+#animate-section #left-section .image-stack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#animate-section #left-section {
+  display: flex;
+  justify-content: space-between;
 }
