@@ -5,9 +5,7 @@
 }
 
 .header-section {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(343deg, rgba(255, 255, 255, 0.15) 39.11%, rgba(59, 130, 246, 0.15) 55.89%, rgba(59, 130, 246, 0.15) 60.09%, rgba(255, 255, 255, 0.15) 78.62%, rgba(59, 130, 246, 0.15) 95.05%);
+  background: linear-gradient(315deg, #ffffff 0%, rgba(59, 130, 246, 0.175) 15%, #ffffff 50%, rgba(59, 130, 246, 0.175) 100%);
 }
 
 .faq-item.open .faq-content {
@@ -57,4 +55,21 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 1536px) {
+  #animate-section #left-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #animate-section #left-section .image-stack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #animate-section #left-section .image-stack img {
+    width: fit-content;
+  }
 }

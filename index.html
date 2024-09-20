@@ -91,20 +91,21 @@
       </nav>
     </header>
 
-    <section class="text-center pt-[50px] md:pt-[100px] pb-[40px] overflow-hidden text-white header-section">
-      <div class="px-8">
-        <h1 class="text-black text-2xl md:text-5xl lg:text-5xl mb-[20px] leading-[40px] md:leading-[80px] lg:leading[60px] opacity-0 translate-y-5 animate-fade-in px-8 md:px-0 contents md:block font-semibold">
-          Bring <span class="text-[#0e74ff] font-bold">Interested Clients,</span><br />
-          And
-          <span class="text-[#0e74ff] font-bold"
-            >Get <span class="relative">Paid <img src="assets/text.png" alt="arrow" class="absolute -bottom-2 right-0" /> </span
-          ></span>
-          as Never Before!
-        </h1>
+    <section class="text-center overflow-hidden text-white">
+      <div class="header-section py-[150px] md:py-[150px] px-8">
+        <div class="px-8">
+          <h1 class="text-black text-2xl md:text-5xl lg:text-5xl mb-[20px] leading-[40px] md:leading-[80px] lg:leading[60px] opacity-0 translate-y-5 animate-fade-in px-8 md:px-0 contents md:block font-semibold">
+            Bring <span class="text-[#0e74ff] font-bold">Interested Clients,</span><br />
+            And
+            <span class="text-[#0e74ff] font-bold"
+              >Get <span class="relative">Paid <img src="assets/text.png" alt="arrow" class="absolute -bottom-2 right-0" /> </span
+            ></span>
+            as Never Before!
+          </h1>
+        </div>
+        <button class="bg-[#0e74ff] text-white py-3 px-6 rounded-full text-sm md:text-xl cursor-pointer mt-5 opacity-0 translate-y-5 animate-fade-in-delay">Join the best affiliate program Now!</button>
       </div>
-      <button class="bg-[#0e74ff] text-white py-3 px-6 rounded-full text-sm md:text-xl cursor-pointer mt-5 opacity-0 translate-y-5 animate-fade-in-delay">Join the best affiliate program Now!</button>
-
-      <main class="relative flex flex-col mt-[50px] md:mt-[150px] justify-center bg-[#0e74ff] overflow-hidden rotate-[-2deg] w-[110%] translate-y-[-10px] translate-x-[-10px]">
+      <main class="relative flex flex-col justify-center bg-[#0e74ff] overflow-hidden rotate-[-2deg] w-[110%] translate-y-[-50px] translate-x-[-10px]">
         <div class="w-full mx-auto px-4 md:px-6 py-4">
           <div class="text-center">
             <div
@@ -252,37 +253,39 @@
 
     <!-- FAQs -->
 
-    <section class="w-full px-6 sm:px-20 md:px-36 lg:px-36 bg-[#0e74ff] py-20">
+    <section class="w-full px-6 sm:px-8 md:px-16 lg:px-32 xl:px-64 bg-[#0e74ff] py-20">
       <h2 class="text-white text-center text-5xl font-semibold mb-8">FAQ's</h2>
 
       <!-- FAQ Item 1 -->
-      <div class="faq-item p-4 mb-4 border-b border-b-white opacity-0 transition-opacity duration-700" id="faq-item-1">
-        <button class="faq-btn w-full text-left flex justify-between items-center font-semibold text-white" onclick="toggleFaq(this, 'faq-item-1')">
+      <div class="faq-item px-8 md:px-16 py-8 mb-4 border-b border-b-white opacity-0 transition-opacity duration-700" id="faq-item-1">
+        <button class="faq-btn w-full text-left flex justify-between items-center font-medium text-white text-md md:text-xl" onclick="toggleFaq(this, 'faq-item-1')">
           How long does it take to get approved?
           <img src="assets/collapsed.png" alt="Collapsed" id="collapsed" />
           <img src="assets/expanded.png" alt="Expanded" id="expanded" class="hidden" />
         </button>
-        <div class="faq-content text-lg text-white text-left mt-2">Approval times vary, but typically, you'll receive a response within a few business days. During this period, we review your application to ensure it meets our program criteria.</div>
+        <div class="faq-content text-[14px] md:text-[16px] text-white text-left mt-2">
+          Approval times vary, but typically, you'll receive a response within a few business days. During this period, we review your application to ensure it meets our program criteria.
+        </div>
       </div>
 
       <!-- FAQ Item 2 -->
-      <div class="faq-item p-4 mb-4 border-b border-b-white opacity-0 transition-opacity duration-700" id="faq-item-2">
-        <button class="faq-btn w-full text-left flex justify-between items-center font-semibold text-white" onclick="toggleFaq(this, 'faq-item-2')">
+      <div class="faq-item px-8 md:px-16 py-8 mb-4 border-b border-b-white opacity-0 transition-opacity duration-700" id="faq-item-2">
+        <button class="faq-btn w-full text-left flex justify-between items-center font-medium text-white text-md md:text-xl" onclick="toggleFaq(this, 'faq-item-2')">
           How can I track my performance?
           <img src="assets/collapsed.png" alt="Collapsed" id="collapsed" />
           <img src="assets/expanded.png" alt="Expanded" id="expanded" class="hidden" />
         </button>
-        <div class="faq-content text-lg text-white text-left mt-2">You can track your performance through the affiliate dashboard, where you will find real-time analytics and performance metrics.</div>
+        <div class="faq-content text-[14px] md:text-[16px] text-white text-left mt-2">You can track your performance through the affiliate dashboard, where you will find real-time analytics and performance metrics.</div>
       </div>
 
       <!-- FAQ Item 3 -->
-      <div class="faq-item p-4 mb-4 border-b border-b-white opacity-0 transition-opacity duration-700" id="faq-item-3">
-        <button class="faq-btn w-full text-left flex justify-between items-center font-semibold text-white" onclick="toggleFaq(this, 'faq-item-3')">
+      <div class="faq-item px-8 md:px-16 py-8 mb-4 border-b border-b-white opacity-0 transition-opacity duration-700" id="faq-item-3">
+        <button class="faq-btn w-full text-left flex justify-between items-center font-medium text-white text-md md:text-xl" onclick="toggleFaq(this, 'faq-item-3')">
           What if I have more questions?
           <img src="assets/collapsed.png" alt="Collapsed" id="collapsed" />
           <img src="assets/expanded.png" alt="Expanded" id="expanded" class="hidden" />
         </button>
-        <div class="faq-content text-lg text-white text-left mt-2">Feel free to reach out to our support team through email or the support portal. We are here to help with any additional questions you might have.</div>
+        <div class="faq-content text-[14px] md:text-[16px] text-white text-left mt-2">Feel free to reach out to our support team through email or the support portal. We are here to help with any additional questions you might have.</div>
       </div>
     </section>
 
@@ -290,20 +293,20 @@
 
     <!-- Banner -->
 
-    <section class="container mx-auto px-4 pt-16">
-      <div class="flex flex-col gap-16 md:flex-row justify-between" id="animate-section">
+    <section class="mx-auto px-4 pt-16">
+      <div class="flex flex-col gap-16 lg:flex-row justify-between" id="animate-section">
         <!-- Left Section: Image -->
-        <div class="mb-8 md:mb-0 md:w-1/2 flex-col justify-center opacity-0" id="left-section">
-          <h1 class="text-[25px] md:text-[30px] lg:text-[48px] leading-normal tracking-wide text-gray-900 mb-12 text-center md:text-left lg:text-left md:pl-16 lg:pl-16 font-semibold">
+        <div class="mb-8 md:mb-0 lg:w-1/2 flex-col justify-center opacity-0" id="left-section">
+          <h1 class="text-[30px] md:mt-[50px] md:text-[40px] lg:text-[48px] leading-normal tracking-wide text-gray-900 mb-12 text-center lg:text-left md:pl-16 lg:pl-16 font-semibold">
             Why you need to work with <span class="text-blue-500 font-bold">Leads Bounty!</span>
           </h1>
           <div class="image-stack relative">
-            <img src="assets/banner.png" alt="Person working on laptop" class="w-full" />
+            <img src="assets/banner.png" alt="Person working on laptop" class="w-fit md:w-full" />
           </div>
         </div>
 
         <!-- Right Section: Text & Features -->
-        <div class="md:w-1/2 space-y-4 opacity-0 animate-slide-in-right p-4" id="right-section">
+        <div class="lg:w-1/2 space-y-4 opacity-0 py-8 px-8 lg:pr-32 animate-slide-in-right" id="right-section">
           <p class="text-red-600 font-semibold mb-4 italic text-xs md:text-lg">Key Features</p>
 
           <!-- Features List -->
@@ -311,32 +314,32 @@
             <li class="flex-col items-start mb-8">
               <div class="flex items-center gap-4 mb-4">
                 <img src="assets/tick_mark.png" alt="tick mark" class="w-6" />
-                <h3 class="text-[18px] md:text-[22px] text-gray-900 italic font-abeezee">High Commission Rates</h3>
+                <h3 class="text-[18px] md:text-[17px] xl:text-[22px] text-gray-900 italic font-abeezee">High Commission Rates</h3>
               </div>
-              <p class="text-gray-700 text-gray-700 text-[16px] md:text-[20px] font-dmsans">Our affiliate program offers some of the highest commission rates in the industry, allowing you to maximize your earnings with every sale.</p>
+              <p class="text-gray-700 text-gray-700 text-[16px] md:text-[16px] xl:text-[20px] font-dmsans">Our affiliate program offers some of the highest commission rates in the industry, allowing you to maximize your earnings with every sale.</p>
             </li>
             <li class="flex-col items-start mb-8">
               <div class="flex items-center gap-4 mb-4">
                 <img src="assets/tick_mark.png" alt="tick mark" class="w-6" />
-                <h3 class="text-[18px] md:text-[22px] text-gray-900 italic font-abeezee">Fast and Reliable Payouts</h3>
+                <h3 class="text-[18px] md:text-[17px] xl:text-[22px] text-gray-900 italic font-abeezee">Fast and Reliable Payouts</h3>
               </div>
-              <p class="text-gray-700 text-gray-700 text-[16px] md:text-[20px] font-dmsans">
+              <p class="text-gray-700 text-gray-700 text-[16px] md:text-[16px] xl:text-[20px] font-dmsans">
                 We offer bi-weekly payments, so you won’t have to wait long to receive your earnings. Whether you prefer PayPal, bank transfer, or any other payment method, we’ve got you covered.
               </p>
             </li>
             <li class="flex-col items-start mb-8">
               <div class="flex items-center gap-4 mb-4">
                 <img src="assets/tick_mark.png" alt="tick mark" class="w-6" />
-                <h3 class="text-[18px] md:text-[22px] text-gray-900 italic font-abeezee">Exclusive High-Converting Offers</h3>
+                <h3 class="text-[18px] md:text-[17px] xl:text-[22px] text-gray-900 italic font-abeezee">Exclusive High-Converting Offers</h3>
               </div>
-              <p class="text-gray-700 text-gray-700 text-[16px] md:text-[20px] font-dmsans">Our affiliate program offers exclusive, high-converting deals optimized for maximum commissions, giving you an edge with minimal effort.</p>
+              <p class="text-gray-700 text-gray-700 text-[16px] md:text-[16px] xl:text-[20px] font-dmsans">Our affiliate program offers exclusive, high-converting deals optimized for maximum commissions, giving you an edge with minimal effort.</p>
             </li>
             <li class="flex-col items-start mb-8">
               <div class="flex items-center gap-4 mb-4">
                 <img src="assets/tick_mark.png" alt="tick mark" class="w-6" />
-                <h3 class="text-[18px] md:text-[22px] text-gray-900 italic font-abeezee">Creative Marketing Resources</h3>
+                <h3 class="text-[18px] md:text-[17px] xl:text-[22px] text-gray-900 italic font-abeezee">Creative Marketing Resources</h3>
               </div>
-              <p class="text-gray-700 text-gray-700 text-[16px] md:text-[20px] font-dmsans">
+              <p class="text-gray-700 text-gray-700 text-[16px] md:text-[15px] xl:text-[20px] font-dmsans">
                 Enhance your affiliate campaigns with our extensive marketing resources, including banners, custom landing pages, email templates, videos, and proven ad copy to boost traffic and conversions.
               </p>
             </li>
