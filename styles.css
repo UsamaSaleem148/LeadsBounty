@@ -73,3 +73,61 @@
   display: flex;
   justify-content: space-between;
 }
+
+.floating-icon {
+  height: auto;
+}
+
+.icon1 {
+  bottom: 10%;
+  right: 15%;
+  animation: float1 8s ease-in-out infinite;
+}
+
+.icon2 {
+  top: 40%;
+  left: 25%;
+  animation: float2 12s ease-in-out infinite;
+}
+
+.icon3 {
+  bottom: 10%;
+  left: 10%;
+  animation: float3 10s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-10px, 30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes float3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, -15px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

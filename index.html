@@ -296,12 +296,15 @@
     <section class="mx-auto px-4 pt-16">
       <div class="flex flex-col gap-16 lg:flex-row justify-between" id="animate-section">
         <!-- Left Section: Image -->
-        <div class="mb-8 md:mb-0 lg:w-1/2 flex-col justify-center opacity-0" id="left-section">
-          <h1 class="text-[30px] md:mt-[50px] md:text-[40px] lg:text-[45px] xl:text-[55px] leading-normal tracking-wide text-gray-900 mb-12 text-center lg:text-left md:pl-16 lg:pl-16 font-semibold">
+        <div class="mb-8 md:mb-0 lg:w-1/2 flex-col justify-center opacity-0 relative" id="left-section">
+          <img src="assets/arrow.png" class="w-8 md:w-16 absolute floating-icon icon1" />
+          <img src="assets/zigzag.png" class="w-8 md:w-16 absolute floating-icon icon2" />
+          <img src="assets/abstract-shape.png" class="w-8 md:w-16 absolute floating-icon icon3" />
+          <h1 class="text-[30px] md:mt-[50px] md:text-[40px] lg:text-[45px] xl:text-[55px] leading-normal tracking-wide text-gray-900 mb-12 xl:mb-0 text-center lg:text-left md:pl-16 lg:pl-16 font-semibold">
             Why you need to work with <span class="text-blue-500 font-bold">Leads Bounty!</span>
           </h1>
           <div class="image-stack relative">
-            <img src="assets/banner.png" alt="Person working on laptop" class="w-fit md:w-fit" />
+            <img src="assets/banner.png" alt="Person working on laptop" class="w-fit md:w-fit xl:-mt-64" />
           </div>
         </div>
 
@@ -310,7 +313,7 @@
           <p class="text-[#E54F6D] font-semibold mb-4 italic text-xs font-abeezee">Key Features</p>
 
           <!-- Features List -->
-          <ul class="space-y-4">
+          <ul class="xl:flex xl:flex-col xl:justify-between xl:h-full">
             <li class="flex-col items-start mb-8">
               <div class="flex items-center gap-4 mb-4">
                 <img src="assets/tick_mark.png" alt="tick mark" class="w-6" />
